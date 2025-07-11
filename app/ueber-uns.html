@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lerncenter Reinach – Über uns</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/flowbite@2.2.0/dist/flowbite.min.js"></script>
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+
+  <div id="nav-placeholder"></div>
+
+  <script>
+    fetch('_nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+
+        const toggleBtn = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        const closeBtn = document.getElementById('sidebar-close');
+
+        toggleBtn?.addEventListener('click', () => {
+          sidebar.classList.remove('translate-x-full');
+          overlay.classList.remove('hidden');
+        });
+
+        closeBtn?.addEventListener('click', closeSidebar);
+        overlay?.addEventListener('click', closeSidebar);
+
+        function closeSidebar() {
+          sidebar.classList.add('translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      });
+  </script>
+
+</body>
+
+</html>
