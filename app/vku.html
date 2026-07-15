@@ -10,7 +10,61 @@
   <script src="https://unpkg.com/flowbite@2.2.0/dist/flowbite.min.js"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+
+  <div class="main-content section mt-24 py-16 ml-5 mr-5">
+    <div class="w-full max-w-7xl mx-auto flex flex-col gap-12">
+
+      <div class="flex flex-col md:flex-row">
+        <div class="flex-1 p-12 bg-blue-100 border border-blue-500 rounded-3xl shadow-2xl">
+          <section>
+            <h1 class="text-4xl font-extrabold text-blue-500">Verkehrskundeunterricht (VKU)</h1>
+            <p class="text-xl text-gray-700 leading-relaxed mt-4">
+              Melde dich noch heute für den VKU an und erfahre, wie man sich im Verkehr richtig verhält.
+            </p>
+            <br>
+            <h3 class="text-2xl font-bold text-blue-400">Was ist der VKU?</h3>
+            <p class="text-xl text-gray-700 leading-relaxed mt-2">
+              Der obligatorische VKU hat zum Ziel, den Verkehrssinn und das Erkennen von Gefahrensituationen zu schulen
+              und die zukünftigen Fahrzeuglenker/innen zu einer defensiven und verantwortungsvollen Fahrweise zu
+              motivieren.
+              <br><br>
+              <strong>1. Teil Verkehrssehen:</strong> Richtiges Einsetzen der Sinnesorgane, um die Gefahren schon im
+              Vorfeld einschätzen und bewältigen zu können.
+              <br><br>
+              <strong>2. Teil Verkehrsumwelt:</strong> Umgang mit anderen Strassenbenützern. Den Partner richtig
+              einschätzen, um deren Verhalten frühzeitig zu erkennen. Strassenkunde und Tageskunde, also Eigenschaften
+              der Strassen sowie andere Einflüsse wie Witterung oder Tageszeiten.
+              <br><br>
+              <strong>3. Teil Verkehrsdynamik:</strong> Regelmässige Kontrollen am Fahrzeug, um die Fahrzeugsicherheit
+              stets zu gewährleisten. Kräfte beim Fahren und die Verkehrsbewegungslehre, die sich mit der Kommunikation,
+              Zeichengabe, Absichtsanzeige und deutlichem Fahren auseinandersetzt.
+              <br><br>
+              <strong>4. Teil Verkehrstaktik:</strong> Einschätzung der eigenen Leistungsfähigkeiten. Die Regeln für das
+              umweltbewusste Fahren und die taktischen Regeln für sicheres Fahren.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <div
+        class="w-full p-8 bg-white border border-gray-200 rounded-3xl shadow-2xl dark:bg-gray-800 dark:border-gray-700">
+        <h2 class="text-3xl font-extrabold text-blue-500 mb-6 text-center">Aktuelle VKU-Kurse & Anmeldung</h2>
+        <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+          Wähle deinen passenden Kurs aus und melde dich direkt online an:
+        </p>
+
+        <div class="relative w-full overflow-hidden rounded-2xl border border-gray-300 dark:border-gray-600"
+          style="height: 600px;">
+          <iframe src="https://iframe.vku-pgs.asa.ch/de/public/coursegroup/extended/VktVXzE4MjI=/1/vku/"
+            class="absolute top-0 left-0 w-full h-full border-0" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 
   <div id="nav-placeholder"></div>
 
@@ -41,5 +95,17 @@
   </script>
 
 </body>
+
+<footer>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("_foot.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</footer>
 
 </html>
