@@ -10,9 +10,39 @@
   <script src="https://unpkg.com/flowbite@2.2.0/dist/flowbite.min.js"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900 dark:text-white flex flex-col min-h-screen">
+
+  <div class="main-content section mt-24 py-16 ml-5 mr-5 flex-grow">
+    <div class="w-full max-w-7xl mx-auto flex flex-col gap-12">
+
+      <div class="flex flex-col md:flex-row">
+        <div class="flex-1 p-12 bg-blue-100 border border-blue-500 rounded-3xl shadow-2xl">
+          <section>
+            <h1 class="text-4xl font-extrabold text-blue-500">Theorie</h1>
+            <p class="text-xl text-gray-700 leading-relaxed mt-4">
+              Gerne unterstützen wir Sie bei der Vorbereitung auf die Theorieprüfung.
+              <br>
+              Die Theoriekurse werden individuell gestaltet und nach ihren Bedürfnissen angepasst.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div id="nav-placeholder"></div>
+
+  <footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch("_foot.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+  </footer>
 
   <script>
     fetch('_nav.html')
