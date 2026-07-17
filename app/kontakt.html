@@ -10,9 +10,121 @@
   <script src="https://unpkg.com/flowbite@2.2.0/dist/flowbite.min.js"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900 dark:text-white flex flex-col min-h-screen">
+
+  <div class="main-content section mt-24 py-16 ml-5 mr-5 flex-grow">
+    <div class="w-full max-w-7xl mx-auto flex flex-col gap-12">
+
+      <div class="p-12 bg-blue-100 border border-blue-500 rounded-3xl shadow-2xl">
+        <h1 class="text-4xl font-extrabold text-blue-500">Kontakt</h1>
+        <p class="text-xl text-gray-700 leading-relaxed mt-4">
+          Haben Sie Fragen oder ein Anliegen? Nutzen Sie unser Kontaktformular oder besuchen Sie uns am Kursort.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl p-8 shadow-xl">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Schreiben Sie uns</h2>
+
+          <form action="https://formsubmit.co/rh@fahrziel.ch" method="POST" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Vorname</label>
+                <input type="text" name="vorname" required
+                  class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900 dark:text-white">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Nachname</label>
+                <input type="text" name="nachname" required
+                  class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900 dark:text-white">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Adresse</label>
+              <input type="text" name="adresse"
+                class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900 dark:text-white">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="sm:col-span-1">
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">PLZ</label>
+                <input type="text" name="plz"
+                  class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900 dark:text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Ort</label>
+                <input type="text" name="ort"
+                  class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900 dark:text-white">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Telefonnummer (für
+                Rückfragen)</label>
+              <input type="tel" name="telefon"
+                class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900 dark:text-white">
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">E-Mail Adresse</label>
+              <input type="email" name="email" required
+                class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900 dark:text-white">
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Kommentar</label>
+              <textarea name="kommentar" rows="4"
+                class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900 dark:text-white resize-none"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition duration-300 shadow-md">
+              Nachricht absenden
+            </button>
+          </form>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl p-8 shadow-xl flex flex-col justify-between h-full min-h-[580px]">
+
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Adresse Kurslokal</h2>
+            <p class="text-blue-500 font-semibold text-lg">(im Kirchgemeindehaus)</p>
+            <p class="text-gray-600 dark:text-gray-300 mt-2 text-lg">
+              Neudorfstrasse 5<br>5734 Reinach AG
+            </p>
+          </div>
+
+          <div
+            class="w-full flex-grow h-80 lg:h-auto rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-600 shadow-inner">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.2289657077614!2d8.183789476883257!3d47.27071191073843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47903bd8d9cfcb1d%3A0x63dae27efc8fae32!2sNeudorfstrasse%205%2C%205734%20Reinach!5e0!3m2!1sde!2sch!4v1710000000000!5m2!1sde!2sch"
+              class="w-full h-full border-0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <div id="nav-placeholder"></div>
+
+  <footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch("_foot.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+  </footer>
 
   <script>
     fetch('_nav.html')
