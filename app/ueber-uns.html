@@ -10,9 +10,97 @@
   <script src="https://unpkg.com/flowbite@2.2.0/dist/flowbite.min.js"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900 dark:text-white flex flex-col min-h-screen">
+
+  <div class="main-content section mt-24 py-16 ml-5 mr-5 flex-grow">
+    <div class="w-full max-w-7xl mx-auto flex flex-col gap-12">
+
+      <div class="flex flex-col md:flex-row">
+        <div class="flex-1 p-12 bg-blue-100 border border-blue-500 rounded-3xl shadow-2xl">
+          <section>
+            <h1 class="text-4xl font-extrabold text-blue-500">Über Uns</h1>
+            <p class="text-xl text-gray-700 leading-relaxed mt-4">
+              Das Lerncenter Reinach ist ein Zusammenschluss von 2 selbständigen Fahrlehrern der Region.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+
+        <div
+          class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl p-8 shadow-xl flex flex-col justify-between items-center text-center relative">
+
+          <div class="flex flex-col items-center w-full">
+            <div
+              class="w-48 h-24 bg-white dark:bg-white rounded-xl flex items-center justify-center mb-6 border border-gray-300 dark:border-gray-600 shadow-sm overflow-hidden">
+              <img src="./images/fahrziel-logo.png" alt="Fahrziel Logo" class="h-full w-full object-contain p-2">
+            </div>
+
+            <div
+              class="w-40 h-40 bg-gray-200 dark:bg-white rounded-full flex items-center justify-center mb-4 overflow-hidden border-4 border-blue-500 shadow-inner">
+              <img src="./images/remo_hunziker.jpg" alt="Remo Hunziker" class="h-full w-full object-cover">
+            </div>
+
+            <h2 class="text-3xl font-extrabold text-blue-500">Fahrziel.ch</h2>
+            <p class="text-lg italic text-gray-500 dark:text-gray-400 mt-1">Flexibel - Dynamisch - Zielorientiert</p>
+          </div>
+
+          <div class="mt-8 text-gray-600 dark:text-gray-300 space-y-2 text-base w-full">
+            <p class="font-semibold text-gray-900 dark:text-white text-lg">Remo Hunziker</p>
+            <p>Aarauerstrasse 44<br>5734 Reinach AG</p>
+            <p class="pt-2"> <a href="tel:0792487935" class="hover:underline font-medium">079 248 79 35</a></p>
+            <p class="pt-4"> <a href="https://www.fahrziel.ch" target="_blank"
+                class="text-blue-500 hover:underline font-semibold">www.fahrziel.ch</a></p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl p-8 shadow-xl flex flex-col justify-between items-center text-center relative">
+
+          <div class="flex flex-col items-center w-full">
+            <div
+              class="w-48 h-24 bg-white dark:bg-white rounded-xl flex items-center justify-center mb-6 border border-gray-300 dark:border-gray-600 shadow-sm overflow-hidden">
+              <img src="./images/gigis-fahrschule_logo.png" alt="Gigis Fahrschule Logo"
+                class="h-full w-full object-contain p-2">
+            </div>
+
+            <div
+              class="w-40 h-40 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mb-4 overflow-hidden border-4 border-blue-500 shadow-inner">
+              <img src="./images/gigi_saputelli.jpg" alt="Gianpiero Saputelli" class="h-full w-full object-cover">
+            </div>
+
+            <h2 class="text-3xl font-extrabold text-blue-500">Gigis Fahrschule</h2>
+            <p class="text-lg italic text-gray-500 dark:text-gray-400 mt-1">Sicher - Fair - Kompetent</p>
+          </div>
+
+          <div class="mt-8 text-gray-600 dark:text-gray-300 space-y-2 text-base w-full">
+            <p class="font-semibold text-gray-900 dark:text-white text-lg">Gianpiero (Gigi) Saputelli</p>
+            <p>Weidstrasse 12c<br>5737 Menziken</p>
+            <p class="pt-2"> <a href="tel:0793344231" class="hover:underline font-medium">079 334 42 31</a></p>
+            <p class="pt-4"> <a href="https://www.gigis-fahrschule.ch" target="_blank"
+                class="text-blue-500 hover:underline font-semibold">www.gigis-fahrschule.ch</a></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 
   <div id="nav-placeholder"></div>
+
+  <footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch("_foot.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+  </footer>
 
   <script>
     fetch('_nav.html')

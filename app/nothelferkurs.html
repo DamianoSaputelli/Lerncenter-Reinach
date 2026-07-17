@@ -10,9 +10,77 @@
   <script src="https://unpkg.com/flowbite@2.2.0/dist/flowbite.min.js"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900 dark:text-white flex flex-col min-h-screen">
+
+  <div class="main-content section mt-24 py-16 ml-5 mr-5 flex-grow">
+    <div class="w-full max-w-7xl mx-auto flex flex-col gap-12">
+
+      <div class="flex flex-col md:flex-row gap-8">
+
+        <div class="flex-1 p-12 bg-blue-100 border border-blue-500 rounded-3xl shadow-2xl text-gray-800">
+          <section>
+            <h1 class="text-4xl font-extrabold text-blue-500">Nothelferkurs</h1>
+
+            <p class="text-xl leading-relaxed mt-4">
+              Um den Lernfahrausweis zu beantragen, benötigen Sie einen gültigen Nothilfeausweis.
+            </p>
+            <p class="text-xl leading-relaxed mt-4">
+              Im Nothelferkurs lernen Sie Notsituationen richtig einschätzen, erste Hilfe leisten, mit Sofortmassnahmen
+              Leben retten und die Menschen an der Unfallstelle vor weiteren Schäden schützen. Dieses Wissen wird dir
+              während dem zweitägigen Nothilfekurs direkt im Lerncenter in Reinach vermittelt.
+            </p>
+
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-blue-300">
+              <div>
+                <span class="block text-sm font-bold uppercase tracking-wider text-blue-500">Dauer</span>
+                <span class="text-lg font-medium">2 Tage (10 Stunden)</span>
+              </div>
+              <div>
+                <span class="block text-sm font-bold uppercase tracking-wider text-blue-500">Kurskosten</span>
+                <span class="text-lg font-medium">Inkl. Ausweis, Kursunterlagen und 30.– Gutschein für
+                  Fahrstunden</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div
+          class="w-full md:w-80 p-8 bg-gray-50 border border-gray-200 rounded-3xl shadow-xl dark:bg-gray-800 dark:border-gray-700">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Vorteile Intensivkurs:</h3>
+          <ul class="space-y-3 text-lg text-gray-700 dark:text-gray-300">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 font-extrabold">✓</span> Für alle geeignet
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 font-extrabold">✓</span> Kurzfristige Buchung möglich
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 font-extrabold">✓</span> Kein Vorwissen nötig
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 font-extrabold">✓</span> Theorie und Praxis wird bequem vor Ort erklärt
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 
   <div id="nav-placeholder"></div>
+
+  <footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch("_foot.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+  </footer>
 
   <script>
     fetch('_nav.html')
